@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WorkoutTracker.Data.Models
 {
@@ -22,11 +24,14 @@ namespace WorkoutTracker.Data.Models
   public enum EquipmentType
   {
     None,
+    [Display(Name="Big Barbell")]
     BigBarbell,
+    [Display(Name = "Small Barbell")]
     SmallBarbell,
     Dumbbell,
     Machine,
     Sandbag,
+    [Display(Name = "Bulgarian Bag")]
     BulgarianBag
   }
 }
